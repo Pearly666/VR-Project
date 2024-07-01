@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,7 @@ using UnityEngine.AI;
 public class EnemyBehaviour : MonoBehaviour
 {
         [SerializeField]private Transform target;  
+        [SerializeField] private int life = 3;
 
     private NavMeshAgent agent;
 
@@ -30,5 +32,17 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Debug.Log("Player touched by the enemy", gameObject);
         }
+        if(other.CompareTag("Bullet"))
+        {
+            life -= 1;
+            KilledByBullet();
+        }
+
+    }
+
+    void KilledByBullet()
+    {
+        if (life == 0) Destroy(gameObject);
+        
     }
 }

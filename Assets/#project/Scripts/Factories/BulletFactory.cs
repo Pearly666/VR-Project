@@ -39,7 +39,8 @@ public class BulletFactory : MonoBehaviour
     public void Shoot(InputAction.CallbackContext  ctx)
     {
         if(ctx.phase == InputActionPhase.Performed)
-        {Debug.Log("SHOOTING");
-        StartCoroutine(Create());}
+        {
+            StartCoroutine(Create());
+        }
     }
 }
