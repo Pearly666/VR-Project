@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BulletFactory : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class BulletFactory : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField]private BulletPool pool;
     [SerializeField] private Transform launchPoint;
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -20,22 +20,26 @@ public class BulletFactory : MonoBehaviour
         {
             pool = FindObjectOfType<BulletPool>();
         }
-        StartCoroutine(Create());
+        //StartCoroutine(Create());
     }
 
     private IEnumerator Create()
     {
-        while (true)
-        {
             if (pool != null)
             {
-                pool.Spawn(launchPoint.position + Vector3.right, Quaternion.identity);
+                pool.Spawn(launchPoint.position,launchPoint.rotation);
             }
             else
             {
-                Instantiate(prefab, launchPoint.position + Vector3.right, Quaternion.identity);
+                Instantiate(prefab, launchPoint.position, launchPoint.rotation);
             }
             yield return new WaitForSeconds(cooldown);
-        }
+    }
+
+    public void Shoot(InputAction.CallbackContext  ctx)
+    {
+        if(ctx.phase == InputActionPhase.Performed)
+        {Debug.Log("SHOOTING");
+        StartCoroutine(Create());}
     }
 }
