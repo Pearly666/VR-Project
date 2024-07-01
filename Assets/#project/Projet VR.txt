@@ -1,0 +1,35 @@
+Idée pour le projet VR:
+
+Idée 1)
+-Player dans un chariot qui se déplace sur un parcours
+-Des cibles le long du parcours et/ou ennemis qui se rapprochent
+-Player qui doit tirer sur les cibles/ennemis sans pouvoir quitter le chariot
+
+Idée 2)
+-player dans une arène avec spawn d'ennemis
+-épée et bouclier dans chaque main
+-déplacements avec joystics
+
+Idée 3)
+UN MINI GOLF
+
+
+
+Projet Time Crisis:
+
+- bullets = rayons lasers lancés par les manettes, munitions infinies (ou pas, selon le temps)
+- ennemis --> objects
+- design du parcours 
+- code : déplacement du chariot, ennemis behavior (déplacements, tirs), tirs du joueur, 
+- ajout d'armes potentiellement
+- ajout de boost
+- "box surprise" à toucher pour obtenir quelque chose
+
+
+Ennemis :
+2 types (qui se déplacents vers le chariot ET qui se "cachent" derrière le décor)
+dégats au corps à corps et/ou tirs à distance
+
+Joueurs:
+XXX vies
+UI qui affiche la vie, les points, boosters, 
