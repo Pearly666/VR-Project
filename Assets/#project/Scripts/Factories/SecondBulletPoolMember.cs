@@ -9,15 +9,10 @@ public class SecondBulletPoolMember : MonoBehaviour
     private void OnBecameInvisible(){
         pool.Kill(this);
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.CompareTag("Player"))
-        {
-            pool.Kill(this);
-        }
-    }
+    
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enzo aime mange du popo");
         if(other.CompareTag("Enemy"))
         {
             pool.Kill(this);

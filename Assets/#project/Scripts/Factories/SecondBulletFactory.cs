@@ -38,6 +38,7 @@ public class SecondBulletFactory : MonoBehaviour
 
     public void SecondShoot(InputAction.CallbackContext  ctx)
     {
+        Debug.Log("Enzo aime les gros lolo");
         if(ctx.phase == InputActionPhase.Performed)
         {
             StartCoroutine(Create());

@@ -590,6 +590,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573514650}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1618219433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5727449201562062245, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7839061464813161174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c02ce9826179c3419508bab975d6bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777287768
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +768,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rail road
       objectReference: {fileID: 0}
+    - target: {fileID: 442163249630677734, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 442163249630677734, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442163249630677734, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618219433}
+    - target: {fileID: 442163249630677734, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SecondShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 442163249630677734, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SecondBulletFactory, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028386408398604243, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028386408398604243, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028386408398604243, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: c7c3f8e0a8aa88e4f8d77d3d032d04a3,
+        type: 3}
+    - target: {fileID: 1028386408398604243, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1499340972174437822, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,6 +894,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5727449201562062245, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5218604945019380853, guid: f2c58c039c0c4824ab4b8c63c5f45971,
+        type: 3}
     - target: {fileID: 5879834946768078491, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
         type: 3}
       propertyPath: m_Speed
@@ -851,6 +915,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6254536534510018831, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5218604945019380853, guid: f2c58c039c0c4824ab4b8c63c5f45971,
+        type: 3}
     - target: {fileID: 7156798550374880788, guid: fdfed1490f606fa4fa6dc5e0c083cdaa,
         type: 3}
       propertyPath: m_Waypoints.Array.size
