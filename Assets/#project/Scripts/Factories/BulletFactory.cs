@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class BulletFactory : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField]private BulletPool pool;
     [SerializeField] private Transform launchPoint;
+    [SerializeField] public Boolean canShoot = true;
     void Start()
     {
 
@@ -20,7 +22,6 @@ public class BulletFactory : MonoBehaviour
         {
             pool = FindObjectOfType<BulletPool>();
         }
-        //StartCoroutine(Create());
     }
 
     private IEnumerator Create()
@@ -38,9 +39,12 @@ public class BulletFactory : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext  ctx)
     {
-        if(ctx.phase == InputActionPhase.Performed)
+        if(canShoot)
         {
-            StartCoroutine(Create());
+            if(ctx.phase == InputActionPhase.Performed)
+            {
+                StartCoroutine(Create());
+            }
         }
     }
 }
