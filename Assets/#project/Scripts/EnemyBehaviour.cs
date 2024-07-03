@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof (NavMeshAgent))]
 public class EnemyBehaviour : MonoBehaviour
 {
-        [SerializeField]private Transform target;  
-        [SerializeField] private int life = 3;
+    public int scoreCount = 0;
+    public UnityEvent<int> onKilled;
+    [SerializeField] private Transform target;  
+    [SerializeField] private int life = 3;
 
     private NavMeshAgent agent;
 
@@ -18,6 +21,8 @@ public class EnemyBehaviour : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(target.position);
+        DisplayManager displayManager = FindObjectOfType<DisplayManager>();
+        onKilled.AddListener(displayManager.UpdateScore);
     }
 
     
@@ -40,9 +45,13 @@ public class EnemyBehaviour : MonoBehaviour
 
     }
 
-    void KilledByBullet()
+    public void KilledByBullet()
     {
-        if (life == 0) Destroy(gameObject);
-        
+        if (life == 0)
+        {
+        scoreCount++;
+        onKilled?.Invoke(scoreCount);
+        Destroy(gameObject);
+        }
     }
 }
