@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Game.unity
   m_IndirectSpecularColor: {r: 0.25675854, g: 0.0056388224, b: 0.08744577, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> 717fedb4d7e4f0267a0cd8f4ae7f253c4e43a4c9:Assets/Scenes/Sarah.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
