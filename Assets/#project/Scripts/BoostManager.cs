@@ -6,15 +6,16 @@ using UnityEngine.Events;
 
 public class BoostManager : MonoBehaviour
 {
-    private bool doubleGunBoost = false;
-    private int score = PlayerDatas.playerScore;
-    public UnityEvent<int> onScoreBoost;
-
-    void Start()
-    {
-    }
-
+    [SerializeField] GameObject secondGun;
     void Update()
     {
+        if(secondGun == null)
+        {
+            if( secondGun.activeSelf == false && PlayerDatas.playerScore >= PlayerDatas.killForSecondHandBooster)
+            {
+                secondGun.SetActive(true);
+            }
+        }
     }
+
 }

@@ -11,7 +11,6 @@ public class BulletFactory : MonoBehaviour
     [SerializeField]private BulletPool pool;
     [SerializeField] private Transform launchPoint;
     [SerializeField] public Boolean canShoot = true;
-    [SerializeField] public float killForBooster = 10;
     void Start()
     {
 
@@ -27,7 +26,7 @@ public class BulletFactory : MonoBehaviour
 
     void Update()
     {
-        if(!canShoot && PlayerDatas.playerScore >= killForBooster) canShoot = true;
+        if(!canShoot && PlayerDatas.secondGunBoosterActivated) canShoot = true;
     }
 
     private IEnumerator Create()
