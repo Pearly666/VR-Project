@@ -12,16 +12,9 @@ public class BoostManager : MonoBehaviour
 
     void Start()
     {
-        onScoreBoost = new UnityEvent<int>();
-        onScoreBoost.AddListener(EnableDoubleGun);
     }
 
     void Update()
     {
-        if(score == 10) onScoreBoost.Invoke(score);
-    }
-    void EnableDoubleGun(int score)
-    {
-        GameObject.FindGameObjectWithTag("LeftGun").GetComponent<BulletFactory>().canShoot = true;
     }
 }
