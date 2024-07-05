@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject zombie;
     public Transform spawner;
     bool isSpawning = true;
     public float spawnTime;
@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
         while(isSpawning == true)
         {
             yield return new WaitForSeconds(spawnTime);
-            Instantiate(enemy, spawner.position, spawner.rotation);
+            Instantiate(zombie, spawner.position, spawner.rotation);
         }
     }
 }
