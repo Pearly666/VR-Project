@@ -6,6 +6,6 @@ public class PlayerDatas : MonoBehaviour
 {
     public static int playerLife = 5;
     public static int playerScore = 0;
-    public static int killForSecondHandBooster = 2;
+    public static int killForSecondHandBooster = 3;
     public static bool secondGunBoosterActivated = false;
 }
