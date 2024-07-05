@@ -12,7 +12,6 @@ public class SecondGunBooster : MonoBehaviour
         {
             Debug.Log("Booster Activated", gameObject);
             PlayerDatas.secondGunBoosterActivated = true;
-            Debug.Log("Parent? " + transform.parent.gameObject);
             Destroy(transform.parent.gameObject);
         }
     }

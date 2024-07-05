@@ -9,9 +9,12 @@ public class BoostManager : MonoBehaviour
     [SerializeField] GameObject secondGun;
     void Update()
     {
-        if( secondGun.activeSelf == false && PlayerDatas.playerScore >= PlayerDatas.killForSecondHandBooster)
+        if(secondGun == null)
         {
-            secondGun.SetActive(true);
+            if( secondGun.activeSelf == false && PlayerDatas.playerScore >= PlayerDatas.killForSecondHandBooster)
+            {
+                secondGun.SetActive(true);
+            }
         }
     }
 
