@@ -8,7 +8,6 @@ using UnityEngine.Events;
 [RequireComponent(typeof (NavMeshAgent))]
 public class EnemyBehaviour : MonoBehaviour
 {
-    public int scoreCount = 0;
     public UnityEvent<int> onKilled;
     [SerializeField] private Transform target;  
     [SerializeField] private int life = 3;
@@ -49,8 +48,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (life == 0)
         {
-        scoreCount++;
-        onKilled?.Invoke(scoreCount);
+        PlayerDatas.playerScore++;
+        onKilled?.Invoke(PlayerDatas.playerScore);
         Destroy(gameObject);
         }
     }

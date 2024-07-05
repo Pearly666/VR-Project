@@ -20,7 +20,6 @@ public class BulletPoolMember : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            PlayerDatas.playerScore++;
             pool.Kill(this);
         }
     }

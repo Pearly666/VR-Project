@@ -15,8 +15,7 @@ public class DisplayManager: MonoBehaviour
     {
         if(0 != value)
         {
-            lastScore += value;
-            scoreText.SetText($"Score: {lastScore}");
+            scoreText.SetText($"Score: {value}");
         }
     }
 }

@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-[SerializeField] private float playerLife = 5;
 
 void OnTriggerEnter(Collider other)
 {
     if(other.CompareTag("Enemy"))
     {
-        playerLife -= 1;
-        Debug.Log(playerLife);
+        PlayerDatas.playerLife -= 1;
+        Debug.Log(PlayerDatas.playerLife);
         DeadPlayer();
     }
 }
 
 void DeadPlayer()
     {
-        if(playerLife <= 0)
+        if(PlayerDatas.playerLife <= 0)
         {
             Debug.Log("you died");
             string currentSceneName = SceneManager.GetActiveScene().name;
