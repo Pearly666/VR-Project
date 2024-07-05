@@ -538,9 +538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873061335c990564cb2bf4d76664e164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onScoreBoost:
-    m_PersistentCalls:
-      m_Calls: []
+  target: {fileID: 0}
+  orbitSpeed: 10
+  orbitDistance: 1
 --- !u!4 &302541247
 Transform:
   m_ObjectHideFlags: 0
@@ -556,6 +556,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &669384306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4650119234668438345, guid: 90b2e51af6b49324da9cd20d98a7253e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3550433970527482452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &669384307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669384306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873061335c990564cb2bf4d76664e164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2058681647}
+  orbitSpeed: 50
+  orbitDistance: 10
 --- !u!1 &743081874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,6 +2587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SecondGunBoosterAll
       objectReference: {fileID: 0}
+    - target: {fileID: 4650119234668438345, guid: 90b2e51af6b49324da9cd20d98a7253e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7323189602892970838, guid: 90b2e51af6b49324da9cd20d98a7253e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2619,7 +2645,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4650119234668438345, guid: 90b2e51af6b49324da9cd20d98a7253e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669384307}
   m_SourcePrefab: {fileID: 100100000, guid: 90b2e51af6b49324da9cd20d98a7253e, type: 3}
 --- !u!1001 &7582140713435203403
 PrefabInstance:
