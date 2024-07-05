@@ -14,6 +14,10 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(spawning());
     }
 
+    void Update()
+    {
+
+    }
     IEnumerator spawning()
     {
         while(isSpawning == true)

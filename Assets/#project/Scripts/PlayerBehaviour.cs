@@ -7,6 +7,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
 [SerializeField] private float playerLife = 5;
 
+
 void OnTriggerEnter(Collider other)
 {
     if(other.CompareTag("Enemy"))
@@ -21,9 +22,7 @@ void DeadPlayer()
     {
         if(playerLife <= 0)
         {
-            Debug.Log("you died");
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 

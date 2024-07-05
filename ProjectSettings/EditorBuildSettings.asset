@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: e1de27f688b2689418904b7468c7c568
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: c91f95a6454fff944a40a366e2640df1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: af2c6387aa6672a4496db97039aeae2a,
       type: 2}
